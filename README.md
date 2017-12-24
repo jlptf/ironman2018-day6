@@ -26,7 +26,8 @@
 * 知道 api 存取規則
 
 <br/>
-<strong>*取得認證 token*</strong>
+
+**取得認證 token**
 
 經過 [Day 5 - 運行 minikube](https://ithelp.ithome.com.tw/articles/10193237) 後，minikube 已經順利運行，因此可以透過下列指令取得 token
 
@@ -84,6 +85,8 @@ https://192.168.99.100:8443
 
 了解上述三個步驟後，我們就可以嘗試利用 curl 與 k8s 溝通
 
+<br/>
+
 *範例一 查看 default 命名空間內正在運行的 Pod*
 
 根據 [說明文件](https://v1-8.docs.kubernetes.io/docs/api-reference/v1.8/#-strong-read-operations-strong--60) 格式如下
@@ -122,6 +125,8 @@ $ curl $APISERVER/api/v1/namespaces/default/pods --header "Authorization: Bearer
 ```bash
 $ curl $APISERVER/api/v1/namespaces/default/pods/nginx-75f4785b7-dxp2h --header "Authorization: Bearer $TOKEN" --insecure
 ```
+
+<br/>
 
 *範例二 在 default 中新增一個 Pod*
 
